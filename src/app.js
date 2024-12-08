@@ -77,12 +77,12 @@ mongoClient.connect(connectionUrl, (error, res1) => {
         console.log(users);
     })
     // ///////////// FIND LIMIT DATA MATCH 27Y ///////////
-    db.collection('users').find({age: 27}).limit(3).toArray((error, users) => {
-        if (error){
-            console.log('Unable to get data');
-        }
-        console.log(users);
-    })
+    // db.collection('users').find({age: 27}).limit(3).toArray((error, users) => {
+    //     if (error){
+    //         console.log('Unable to get data');
+    //     }
+    //     console.log(users);
+    // })
     // ///////// UPDATE NAME FOR THE FIRST 4 DOCUMENTS ///////////
     // const updateName = ['Ragab Sayed', 'Sayed Ismail', 'Sanaa Sayed', 'Mohamed Ragab'];
     // db.collection('users').find().limit(4).toArray((err, data) =>{
@@ -106,7 +106,7 @@ mongoClient.connect(connectionUrl, (error, res1) => {
     // })
     // //////////// UPDATE ALL DOCUMENTS BY ADD ON AGE 10Y ////////////
     // db.collection('users').updateMany({},
-    //     {$inc:{age: -10}}
+    //     {$inc:{age: 10}}
     // ).then((data1) => {console.log(data1.modifiedCount);})
     // .catch((err) => {console.log(err)})
     // ///// DELETE ALL DOCUMENTS THAT MATCH AGE = 41Y //////
